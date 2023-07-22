@@ -1,0 +1,54 @@
+Goal - It is required to understand what you are going to accomplish
+- Reduce Test regression cycle
+- Reduce Technical Debt
+- Enable continuous testing
+ You need to communicate your goal with the team and stress in It
+
+ WHO will do automation
+ You need someone to:
+ - write scripts
+ - monitor scripts execution
+ - maintain scripts (update)
+
+ WHO:
+ - developer? (time and efforts)
+ - manual testers? (time and efforts)
+ - automation engineer
+
+ Involvement
+- Temporary assignment
+    WORKS ONLY if you have another plan and strategy for future tests
+    OTHERWISE you regression scope will growth and you return to the start point
+- Permanent assignment
+    Invest in education
+- Employ automation engineer
+    Integrate AE into the team
+
+WHAT do you plan execution
+- Which tests should be automated
+- Clearly defining scenarios
+
+IMPLEMENTATION
+Selecting language and used framework based on:
+- Contributor knowledge
+- Project language
+
+EXECUTION
+- Local (required manual intervention)
+- Separate build which run several times per day/week etc. Tests should be professionally written to be sure that they
+are not flaky and trusted
+- CI job when someone merge the code. Requires VERY reliable tests
+!!!USE gradually approach!!!
+
+- Developers can be triaging the failures
+- Be prepare to unreliable tests
+
+
+
+
+
+
+
+
+
+
