@@ -1,0 +1,9 @@
+1. Very important to understand the goal of automation
+2. Important to understand your role in test automation contribution
+    - Product Owner/Business Analyst - need to understand that without safety blanket team doesn't know where to go,
+      the impact of the test automation
+    - Developers - very quick response from the tests(quick feedback). Developers should contribute into unit tests. Developers may
+      update the failed tests which failed because of dev-updates.
+    - Testers. Automation is not replacement for testing. Manuals are still needed to explore and thoroughly interrogate
+    the application. They would be the one who discover your most costly bugs. Great help for test automation initiatives
+    They may contribute into triaging and maintaining the automation
