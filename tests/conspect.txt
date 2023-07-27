@@ -1,0 +1,29 @@
+- The tests directory will contain all the test cases we will write. pytest does not require a directory named "tests"
+per se, but most Python projects use it as a conventional way to separate product code from test code.
+
+- You can also run tests using the shorter pytest command. However, I recommend always using python -m pytest.
+The lengthier command automatically adds the current directory to sys.path so that all modules in the project can be discovered.
+
+- When you enter the command to execute the tests, you will see pytest print a banner, list test modules as they run,
+print a "." for each passing test case, and then conclude with the test results summary.
+In our case, you should see that our one test passed. Nice! It should run very quickly, too.
+
+- So, how can we properly handle and verify exceptions inside of a test case? We could write our own try/except block,
+but thankfully, pytest actually provides a construct for handling expected exceptions: pytest.raises.
+
+- In Python, with is a special statement for automatically handling extra "enter" and "exit" logic for a caller.
+It is most commonly used for file input and output. However, f or pytest.raises, the "enter" logic makes the code catch
+any exceptions, and the "exit" logic asserts if the desired exception type was actually raised.
+
+
+FIXTURES
+- special functions which pytest can call before the test functions
+- fixtures could be shared between multiple test modules just separate the fixture to the independent conftest.py
+file within the test folder
+- one test case can use multiple fixtures, just make sure that each fixture has unique name
+- fixtures could be used for the set up and cleanup with the words yield, everything before yield will be set up
+statement and everything after will be clean up
+- scope of the fixture is also configurable (the time when fixture will be run), By default the scope = 'function',
+but we can set module, session https://docs.pytest.org/en/6.2.x/fixture.html
+
+
