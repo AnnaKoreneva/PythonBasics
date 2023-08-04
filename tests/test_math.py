@@ -25,7 +25,7 @@ params = [
 ]
 
 
+@pytest.mark.math
 @pytest.mark.parametrize('a, b, result', params)
 def test_multiplication(a, b, result):
     assert a * b == result
-

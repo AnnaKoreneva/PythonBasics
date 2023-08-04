@@ -26,4 +26,43 @@ statement and everything after will be clean up
 - scope of the fixture is also configurable (the time when fixture will be run), By default the scope = 'function',
 but we can set module, session https://docs.pytest.org/en/6.2.x/fixture.html
 
+Pytest_options
+pytest --help / pytest -h : help info
+python3 -m pytest --verbose : information about passed and failed tests
+python3 -m pytest--quiet: only summarization bout passed tests but if test fails we still see failure introspection
+python3 -m pytest --exitfirst OR --maxfail=[num]
+python3 -m pytest --junit-xml [file_name] - If log file already exists it will be rewritten
+
+Configurations in file
+https://docs.pytest.org/en/stable/reference/customize.html
+Should be created in the project root directory
+
+Running tests
+python3 -m pytest tests/test_accum.py::test_accum_add_two - run only one test
+python3 -m pytest tests/test_accum.py - run all tests from the test_accum.py file
+python3 -m pytest -k one - Run all tests which include the keyword 'one'
+python3 -m pytest -k "not one" - boolean not means to run all tests which don't include the one keyword
+
+https://docs.pytest.org/en/stable/example/markers.html
+python3 -m pytest -m math - To run tests which include marker math
+
+PLUGINS
+pip3 install pytest-html - html reporting plugin
+python3 -m pytest --html=report.html - for writing results in html report
+pytest-cov - plugin for measuring coverage
+python3 -m pytest --cov=accum - measure the code coverage for the project directory. In our case It is "accum"
+python3 -m pytest --cov=accum --cov-report html - generate coverage  report in html format
+python3 -m pytest --cov=accum --cov-branch - measure the branch coverage
+pip3 install pytest-xdist - for test parallel running
+pip3 install pytest-bdd - plugin for writing tests in bdd format
+
+
+
+
+
+
+
+
+
+
 
