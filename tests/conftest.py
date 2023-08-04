@@ -1,9 +1,9 @@
 import pytest
 from accum.accum import Accumulator
 
-@pytest.fixture(scope='module')
+@pytest.fixture(scope="function")
 def accumul():
     return Accumulator()
-@pytest.fixture(scope='function')
+@pytest.fixture(scope ="function")
 def accumul_2():
     return Accumulator()

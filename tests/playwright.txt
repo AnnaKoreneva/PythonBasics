@@ -1,0 +1,19 @@
+Playwright the browser automation tool from Microsoft.
+Runs superfast.
+pip3 install playwright
+Install pytest plugin that provides helpful fixtures and command line options: pip3 install pytest-playwright
+Install the browser project: install playwright
+
+Playwright tests corresponding browser engines WebKit, Chromium, Firefox.
+
+Playwright takes a unique approach to browser setup. Instead of launching a new browser instance for each test, it uses
+one browser instance for all tests in the suite. Each test then creates a unique browser context within the browser
+instance, which is like an incognito session within the browser. It is very fast to create and destroy – much faster
+than a full browser instance.
+
+One browser instance may simultaneously have multiple contexts. Each context keeps its own cookies and session storage,
+so contexts are independent of each other. Each context may also have multiple pages or tabs open at any given time.
+
+Contexts also enable scalable parallel execution. We could easily run tests in parallel with the same browser instance
+because each context is isolated.
+

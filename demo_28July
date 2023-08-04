@@ -1,0 +1,36 @@
+Today we would like to concentrate on the improvements related to the performance statistics which we have done so far
+to increase the calculations accuracy and user experience.
+User Story 20320: Ad Results: Change the Avg Per Week to Avg Per Day - on the AdCorner AdResults page we change the Avg
+per week parameter to Avg per day one to give user an understanding of spent money distribution within the days. BE and FB were involved in that improvement
+
+User Story 19800: Filters set: Change the logic of To Date filter - the next improvement is related to the filters at the top of the page.
+By default the start day of the filters was 1st January 2018, what affects the parameters and charts representation.
+Presently the start date for the filters is dynamically changeable for the organization because organization_created_at
+date we take as a start date for the filter.
+
+User Story 19326: Template Details: Add the filter by campaign status at the top of the page     ([IG Video Ad] Video Campaign)
+The Template entity is played significant role on the AdCorner platform. Based on the template could be run numerous
+campaigns on different locations with different budged and duration therefore we found It useful to add the filter by
+campaign status to give business ability to see and compare performance stats particularly for the appropriate campaign type
+By default selected Active and completed campaigns
+
+User Story 20993: Ad Results: Replace Reach parameter with the Impression for the FB and IG for the Age, Gender, Device and Location charts
+During the AdCorner stabilization we found out that accumulated charts such  as Device, Age, Gender, and Map were mixing
+up two different by meaning parameters. While Facebook and Instagram channels used the reach parameter as target for charts-data representation,
+G-Ads represented the impressions because Reach parameter isn't used for the Google Ads.
+Because of impressions are common for all platforms and logically represent the same we refactor code to retrieve the impressions for IG and FB.
+The functions, queries, BE and FE were updated in the scope of current improvement.
+
+The next set of improvements were done for the device box.
+User Story 18111: Switch the Mobile Infographic on the reporting to Phone and Tablet
+
+We switched the Mobile infographic on the reporting to phone and tablet. Facebook graph API mix them into the one object
+called mobile so what we needed to do is to parse It, is to retrieve the data related with Android tablets and ipad,
+request icon from the designer side as the result  we are able to see more accurate and informative representation of
+impressions destribution within device type and devise OS
+
+User Story 20994: Ad Results: Retrieve device data from the Google Ads side and represent them on the AdCorner Portal
+Code didn't support the retrieving information about devices from the G-ads, we added possibility to retrieve device data from G-Ads on daily basis for the campaigns
+
+We have been done a lot of improvements and bug fixes since the last demo, I concentrated on the most valuable one.
+To keep track on the bug distribution by Priority and product functionality we use Azure DevOps dashboard charts of which based on the predetermined queries of AdCorner project

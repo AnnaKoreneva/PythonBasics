@@ -1,17 +1,20 @@
 import pytest
 
+@pytest.mark.accumulator
 def test_accumulator_init(accumul, accumul_2):
     assert accumul.count == 0
-
+@pytest.mark.accumulator
 def test_accum_add_one(accumul):
     accumul.add()
     assert accumul.count == 1
 
+@pytest.mark.accumulator
 def test_accum_add_two(accumul):
     accumul.add()
     accumul.add()
     assert accumul.count == 2
 
+@pytest.mark.accumulator
 def test_accum_add_three(accumul):
     accumul.add(3)
     assert accumul.count == 3
